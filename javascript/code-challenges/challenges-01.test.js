@@ -67,7 +67,7 @@ const greeting = (word) => {
 
 const speaker = (words, callback) => {
   let newArr = [];
-  words.forEach((word) =>{
+  words.forEach((word) => {
     // words[index] = string.toUpperCase() + '!';
     newArr.push(callback(word));
 
@@ -94,12 +94,19 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
+
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
+// addNumbers(8, [], 5, addValues)
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
@@ -120,6 +127,14 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  let arrTOReturn = [];
+  availableItems.forEach((item) => {
+    if (item.available) {
+      arrTOReturn.push(item.name);
+    }
+  });
+  return arrTOReturn;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
