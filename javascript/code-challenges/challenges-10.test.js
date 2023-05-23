@@ -120,7 +120,7 @@ const salesData = (hours, data) => {
   const data2 = [];
 
   hours.forEach((hour, index) => {
-    const cookiesSold = data.reduce((total, store) => total + store[index], 0);
+    const cookiesSold = data[index];
     const salesObject = {
       sales: `${cookiesSold} cookies`,
       time: hour
