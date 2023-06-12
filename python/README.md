@@ -2,6 +2,10 @@
 
 ## Language: `Python`
 
+## Code Challenges
+
+[Code Challenges](./data_structures/401_CodeChallenges/README.md)
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
