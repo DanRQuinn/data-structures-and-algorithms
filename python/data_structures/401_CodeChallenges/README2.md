@@ -4,7 +4,7 @@ Write a function called insertShiftArray which takes in an array and a value to 
 
 ## Whiteboard Process
 
-![Challenge 2](./Screenshot%202023-06-13%20at%202.21.55%20PM.png)
+![Challenge 2](./WhiteBoards/Screenshot%202023-06-13%20at%202.21.55%20PM.png)
 
 ## Approach & Efficiency
 
