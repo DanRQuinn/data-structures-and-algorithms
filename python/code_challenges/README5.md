@@ -1,7 +1,7 @@
 # Challenge 5
 
 ## Linked Lists
-vd
+
 we traversed through linked lists using nodes and next
 
 ## Contributers

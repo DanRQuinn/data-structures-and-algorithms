@@ -1,3 +1,28 @@
+# Challenge 6
+
+Write the following methods for the Linked List class:
+
+append
+  arguments: new value
+  adds a new node with the given value to the end of the list
+insert before
+  arguments: value, new value
+  adds a new node with the given new value immediately before the first node that has the value specified
+insert after
+  arguments: value, new value
+  adds a new node with the given new value immediately after the first node that has the value specified
+
+
+## Whiteboard Process
+
+![Code Challange 6](./Screenshots/cc6.png)
+
+## Approach & Efficiency
+
+We used Bard to get the tests to work. This didn't work everytime but when we put our heads together we were able to figure it out and make it work.
+
+## Solution
+
 class Node:
     def __init__(self, value, _next=None):
         self.value = value
@@ -10,9 +35,6 @@ class LinkedList:
     def __init__(self, head=None, values=None, insert=None):
         self.head = None
 
-
-# LinkedList: Apple.
-# Given value: Banana.
     def insert (self, value):
         newNode = Node(value)
         # This is our banana
@@ -96,9 +118,3 @@ class TargetError:
     pass
 
 
-
-
-# Code Challenge 06
-# CD into code_challenges
-# Pytest test_linked_list_insertions.py
-# pytest-watch-k version_1 < this will watch for any changes to your file

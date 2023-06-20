@@ -4,13 +4,15 @@
 
 ## Code Challenges
 
-[Code Challenge 1](./data_structures/401_CodeChallenges/README.md)
+[Code Challenge 1](./code_challenges/README.md)
 
-[Code Challenge 2](./data_structures/401_CodeChallenges/README2.md)
+[Code Challenge 2](./code_challenges/README2.md)
 
-[Code Challenge 3](./data_structures/401_CodeChallenges/README3.md)
+[Code Challenge 3](./code_challenges/README3.md)
 
-[Code Challenge 5](./data_structures/401_CodeChallenges/README5.md)
+[Code Challenge 5](./code_challenges/README5.md)
+
+[Code Challenge 6](./code_challenges/README6.md)
 
 ### Folder and Challenge Setup
 
