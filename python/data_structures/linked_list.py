@@ -83,6 +83,24 @@ class LinkedList:
             current = current._next
         return False
 
+# kth from end
+# argument: a number, k, as a parameter.
+# Return the node’s value that is k places from the tail of the linked list.
+# You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+    def kth_from_end(self, k):
+        current = self.head
+        length = 0
+        while current is not None:
+            current = current._next
+            length += 1
+        if k < 0 or k >= length:
+            raise TargetError("Target is out of range")
+        current = self.head
+        for i in range(length - k - 1):
+            current = current._next
+        return current.value
+# q: explain the logic behind the solution
+# a: we need to find the length of the linked list, then subtract the k value from the length to find the index of the node we want to return. We then traverse the linked list to that index and return the value of that node.
 
 
     def traverse(self):
@@ -92,7 +110,8 @@ class LinkedList:
             current = current._next
 
 
-class TargetError:
+
+class TargetError(Exception):
     pass
 
 
