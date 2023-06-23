@@ -18,6 +18,8 @@
 
 [Code Challenge 8](./code_challenges/README8.md)
 
+[Code Challenge 8](./code_challenges/README9.md)
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
