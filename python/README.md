@@ -18,7 +18,9 @@
 
 [Code Challenge 8](./code_challenges/README8.md)
 
-[Code Challenge 8](./code_challenges/README9.md)
+[Code Challenge 10](./code_challenges/README10.md)
+
+[Code Challenge 11](./code_challenges/README11.md)
 
 ### Folder and Challenge Setup
 
