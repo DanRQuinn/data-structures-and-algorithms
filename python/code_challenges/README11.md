@@ -1,4 +1,4 @@
-# Challenge 7
+# Challenge 11
 
 Implement a Queue using two Stacks.
 
@@ -8,7 +8,9 @@ Implement a Queue using two Stacks.
 
 ## Approach & Efficiency
 
+## Collaborators
 
+401 Python Classmates
 
 Time: O(1)
 Space: O(1)
