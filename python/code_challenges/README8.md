@@ -18,6 +18,8 @@ Space: O(n)
 
 ## Solution
 
+[zip](code_challenges/linked_list_zip.py)
+
 from data_structures.linked_list import LinkedList
 <!-- // This is a traversal method for how to iterate through two different linked lists -->
 def zip_lists(list1, list2):

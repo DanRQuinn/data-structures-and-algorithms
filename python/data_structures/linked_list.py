@@ -112,7 +112,16 @@ class LinkedList:
 
 
 class TargetError(Exception):
-    pass
+    """
+    Exception raised when the target node is out of range.
+
+    Attributes:
+        message (str): The error message.
+    """
+
+    def __init__(self, message):
+        super().__init__(message)
+
 
 
 
