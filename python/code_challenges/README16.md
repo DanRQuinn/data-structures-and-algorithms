@@ -20,6 +20,8 @@ Space: O(log n)
 
 ## Solution
 
+[tree max](data_structures/binary_tree.py)
+
 def find_maximum_value(self):
         # Initialize a variable to store the maximum value.
         max_value = None
