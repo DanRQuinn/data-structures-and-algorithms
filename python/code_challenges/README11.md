@@ -4,7 +4,7 @@ Implement a Queue using two Stacks.
 
 ## Whiteboard Process
 
-![Code Challange 11](./Screenshots/cc11.png)
+![Code Challange 11](./Screenshots/cc11.jpg)
 
 ## Approach & Efficiency
 
