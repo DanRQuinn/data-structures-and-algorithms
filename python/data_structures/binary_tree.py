@@ -61,7 +61,7 @@ class BinaryTree:
 
         # If the maximum value is still None, return -1.
         if max_value is None:
-            return -1
+            return None
 
         # Otherwise, return the value of the maximum value.
         return max_value
