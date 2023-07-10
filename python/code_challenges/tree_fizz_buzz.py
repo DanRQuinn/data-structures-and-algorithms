@@ -7,7 +7,7 @@ class TreeNode:
         self.children = []
 
 def fizz_buzz_tree(tree):
-  if not tree:
+  if not tree.root:
     return None
 
   new_tree = KaryTree(TreeNode(None))
