@@ -6,7 +6,7 @@ def test_exists():
     assert Hashtable
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_get_apple():
     hashtable = Hashtable()
     hashtable.set("apple", "Used for apple sauce")
@@ -15,7 +15,7 @@ def test_get_apple():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_internals():
     hashtable = Hashtable(1024)
     hashtable.set("ahmad", 30)
@@ -31,4 +31,21 @@ def test_internals():
 
     expected = [[["silent", True], ["listen", "to me"]], [["ahmad", 30]]]
 
+    assert actual == expected
+
+def test_internal():
+    hashtable = Hashtable(1024)
+    hashtable.set("ahmad", 30)
+    hashtable.set("silent", True)
+    hashtable.set("listen", "to me")
+
+    actual = hashtable._hash("ahmad")
+    expected = 1024
+
+    assert actual == expected
+
+def test_hash():
+    hashtable=Hashtable()
+    actual = hashtable._hash("ahmad")
+    expected = 1024
     assert actual == expected
