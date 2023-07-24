@@ -7,108 +7,87 @@ class Node:
 
 
 class Hashtable:
-  def __init__(self, size=1024):
-    self.size = size
-    self._buckets = [None] * size
-
-  def hash(self, key):
-    """_summary_
-
-    Args:
-        key (_type_): _description_
-
-    Returns:
-        _type_: _description_
     """
-    return hash(key) % self.size
+    Implement a Hashtable Class with the following methods:
 
-  def set(self, key, value):
-    """_summary_
-
-    Args:
-        key (_type_): _description_
-        value (_type_): _description_
+set
+Arguments: key, value
+Returns: nothing
+This method should hash the key, and set the key and value pair in the table, handling collisions as needed.
+Should a given key already exist, replace its value from the value argument given to this method.
+get
+Arguments: key
+Returns: Value associated with that key in the table
+has
+Arguments: key
+Returns: Boolean, indicating if the key exists in the table already.
+keys
+Returns: Collection of keys
+hash
+Arguments: key
+Returns: Index in the collection for that key
     """
-    index = self.hash(key)
-
-    if self._buckets[index] is None:
-      self._buckets[index] = Node(key, value)
-    else:
-      current = self._buckets[index]
-      while current:
-        if current.key == key:
-          current.value = value
-          return
-        if current.next is None:
-          break
-        current = current.next
-
-      new_node = Node(key, value)
-      print(new_node)
-      current.next = new_node
 
 
-  def get(self, key):
-    """_summary_
+    def __init__(self, _size):
+        self._size = _size
+        self._bucket = [None] * _size
 
-    Args:
-        key (_type_): _description_
+    # This method sets the key and value pair in the table.
+    # If the key already exists in the table, the value will be replaced.
+    def set(self, key, value):
+        index = self.hash(key)
+        while self._bucket[index] is not None:
+            if self._bucket[index][0] == key:
+                self._bucket[index][1] = value
+                return
+            index = (index + 1) % self._size
 
-    Raises:
-        KeyError: _description_
+        self.table[index] = (key, value)
 
-    Returns:
-        _type_: _description_
-    """
-    index = self.hash(key)
+    # This method returns the value associated with the given key.
+    # If the key does not exist in the _bucket, None is returned.
+    def get(self, key):
+        index = self.hash(key)
+        while self._bucket[index] is not None:
+            if self._bucket[index][0] == key:
+                return self._bucket[index][1]
+            index = (index + 1) % self._size
 
-    current = self._buckets[index]
-    while current:
-      if current.key == key:
-        print(current.value)
-        return current.value
-      current = current.next
+        return None
 
-    raise KeyError(key)
+    # This method returns True if the given key exists in the _bucket, False otherwise.
+    def has(self, key):
+        index = self.hash(key)
+        while self._bucket[index] is not None:
+            if self._bucket[index][0] == key:
+                return True
+            index = (index + 1) % self._size
 
-  def has(self, key):
-    """_summary_
+        return False
 
-    Args:
-        key (_type_): _description_
+    # This method returns a list of all the keys in the _bucket.
+    def keys(self):
+        keys = []
+        for item in self._bucket:
+            if item is not None:
+                keys.append(item[0])
+        return keys
 
-    Returns:
-        _type_: _description_
-    """
-    try:
-      self.get(key)
-      return True
-    except KeyError:
-      return False
+    # This method returns the index in the _bucket for the given key.
+    def hash(self, key):
+        hash_code = 0
+        for character in key:
+            hash_code += ord(character)
+        return hash_code % self._size
 
-  def keys(self):
-    """_summary_
 
-    Returns:
-        _type_: _description_
-    """
-    keys_list = []
-    for node in self._buckets:
-      current = node
-      while current:
-        keys_list.append(current.key)
-        current = current.next
-    return keys_list
-
-  def contains(self, key):
-    """
-    Args: key (_type_): _description_
-    Returns: _type_: _description_
-    """
-    index = self.hash(key)
-    current = self._buckets[index]
-    while current:
-      if current.key == key:
-        return True
-      current = current.next
-    return False
+if __name__ == "__main__":
+    hashtable = Hashtable(10)
+    hashtable.set("key1", "value1")
+    hashtable.set("key2", "value2")
+    print(hashtable.get("key1"))
+    print(hashtable.get("key2"))
+    print(hashtable.has("key1"))
+    print(hashtable.has("key3"))
+    print(hashtable.keys())
