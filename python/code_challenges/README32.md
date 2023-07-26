@@ -11,9 +11,12 @@ python 401 class
 
 ## Whiteboard Process
 
-![Code Challange 32](./python/code_challenges/Screenshots/cc32.png)
+![Code Challange 32](./Screenshots/cc32.png)
 
 ## Solution
 
-[hashmap-repeated-word](python/code_challenges/hashtable_repeated_word.py)
+[tree-intersection](python/code_challenges/tree_intersection.py)
 
+## test
+
+[test-tree-intersection](python/tests/code_challenges/test_tree_intersection.py)
