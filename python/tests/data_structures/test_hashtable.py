@@ -25,7 +25,7 @@ def test_internals():
     actual = []
 
     # NOTE: purposely breaking encapsulation to test the "internals" of Hashmap
-    for item in hashtable._buckets:
+    for item in hashtable._bucket:
         if item:
             actual.append(item.display())
 
@@ -33,6 +33,7 @@ def test_internals():
 
     assert actual == expected
 
+# @pytest.mark.skip("TODO")
 def test_internal():
     hashtable = Hashtable(1024)
     hashtable.set("ahmad", 30)
@@ -44,6 +45,7 @@ def test_internal():
 
     assert actual == expected
 
+# @pytest.mark.skip("TODO")
 def test_hash():
     hashtable=Hashtable()
     actual = hashtable._hash("ahmad")
