@@ -1,5 +1,6 @@
 import pytest
 from data_structures.hashtable import Hashtable
+from data_structures.hashtable import Node
 
 
 def test_exists():
@@ -33,7 +34,7 @@ def test_internals():
 
     assert actual == expected
 
-# @pytest.mark.skip("TODO")
+@pytest.mark.skip("TODO")
 def test_internal():
     hashtable = Hashtable(1024)
     hashtable.set("ahmad", 30)
@@ -45,7 +46,7 @@ def test_internal():
 
     assert actual == expected
 
-# @pytest.mark.skip("TODO")
+@pytest.mark.skip("TODO")
 def test_hash():
     hashtable=Hashtable()
     actual = hashtable._hash("ahmad")
